@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(182, 249, 254);
+}
+
+.card{
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: 5px 5px 10px;
+    padding: 1rem;
+}
+
+img{
+    width: 100%;
+    background-image: url('../img/IMG_0774.jpg')
+}
