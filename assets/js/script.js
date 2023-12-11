@@ -23,6 +23,7 @@
 
 // Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
 // Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
+// Creare l’array di oggetti con le informazioni fornite.
 
 const team = [
     {nome: 'Wayne Barnett', ruolo: 'Founder & CEO', foto: 'wayne-barnett-founder-ceo.jpg'},
@@ -35,6 +36,7 @@ const team = [
 
 console.log(team);
 
+const container = document.querySelector('.container');
 
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 
@@ -43,4 +45,38 @@ for(let i = 0; i < team.length; i++){
     console.log(team[i].nome);
     console.log(team[i].ruolo);
     console.log(team[i].foto);
+
+    
+    // Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+    // creato un div
+    const div = document.createElement('div');
+
+    // aggiunta una class a div
+    div.classList.add('card');
+
+    const nomeEl = document.createElement('p');
+    const ruoloEl = document.createElement('p');
+    const fotoEl = document.createElement('img');
+
+    nomeEl.append(team[i].nome);
+    ruoloEl.append(team[i].ruolo);
+    fotoEl.append(team[i].foto);
+    
+    div.append(nomeEl);
+    div.append(ruoloEl);
+    div.append(fotoEl);
+    
+    container.append(div);
+    
+
+
+
+
+
+
+
+
 }
+
+
