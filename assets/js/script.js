@@ -42,30 +42,29 @@ const container = document.querySelector('.container');
 
 for(let i = 0; i < team.length; i++){
     // console.log(team[i]);
+    console.log(team[i].foto);
     console.log(team[i].nome);
     console.log(team[i].ruolo);
-    console.log(team[i].foto);
 
     
     // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-    // creato un div
+    // Creato elementi
     const div = document.createElement('div');
-
-    // aggiunta una class a div
-    div.classList.add('card');
-
-    const nomeEl = document.createElement('p');
+    const nomeEl = document.createElement('h2');
     const ruoloEl = document.createElement('p');
     const fotoEl = document.createElement('img');
+
+    fotoEl.src = 'foto.jpg';
+
+    // Aggiunta una class a div
+    div.classList.add('card');
 
     nomeEl.append(team[i].nome);
     ruoloEl.append(team[i].ruolo);
     fotoEl.append(team[i].foto);
     
-    div.append(nomeEl);
-    div.append(ruoloEl);
-    div.append(fotoEl);
+    div.append(fotoEl, nomeEl, ruoloEl);
     
     container.append(div);
     
